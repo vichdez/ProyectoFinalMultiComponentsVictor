@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".login.Register" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <TextView
+                android:text="@string/labelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvRLabelNombre" android:layout_weight="1"/>
+        <TextView
+                android:text="@string/labelSurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvRLabelApellido" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etRNombre" android:layout_weight="1" tools:ignore="TouchTargetSizeCheck"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etRApellido" android:layout_weight="1" tools:ignore="TouchTargetSizeCheck"/>
+    </LinearLayout>
+    <TextView
+            android:text="@string/labelEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvREmail" android:layout_marginBottom="10dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/etREmail" tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            android:layout_marginBottom="10dp"/>
+    <TextView
+            android:text="@string/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvRPassw" android:layout_marginBottom="10dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/etRPassw" android:layout_marginBottom="10dp"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <TextView
+                android:text="@string/labelPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvRLabelTel" android:layout_weight="1"/>
+        <TextView
+                android:text="@string/labelProvincia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvRLabelProvin" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/etRTel" android:layout_weight="1"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etRProvin" android:layout_weight="1" tools:ignore="TouchTargetSizeCheck"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <TextView
+                android:text="@string/labelCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvRCiudad" android:layout_weight="1"/>
+        <TextView
+                android:text="@string/labelAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvRDir" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etRCiu" android:layout_weight="1" tools:ignore="TouchTargetSizeCheck"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etRDir" android:layout_weight="1" tools:ignore="TouchTargetSizeCheck"/>
+    </LinearLayout>
+    <Button
+            android:text="@string/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btnRRegister" android:onClick="registrarUsuario"/>
+</LinearLayout>

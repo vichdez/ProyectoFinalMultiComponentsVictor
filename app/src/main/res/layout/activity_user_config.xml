@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserConfig" android:orientation="vertical">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvLabelDatos" android:layout_marginStart="5dp"
+            android:textSize="16sp" android:text="@string/labelDatos" android:layout_marginTop="15dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="15dp">
+        <TextView
+                android:text="@string/labelName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvLabelNombre"
+                android:textSize="16sp" android:layout_weight="0.5"/>
+        <TextView
+                android:text="@string/labelSurname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvLabelApellido"
+                android:textSize="16sp" android:layout_weight="0.5"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/etNombre" android:layout_marginStart="5dp"
+                android:textSize="20sp" android:inputType="textPersonName|text" android:layout_weight="0.5"/>
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/etApellido" android:layout_marginStart="5dp"
+                android:textSize="20sp" android:inputType="textPersonName|text" android:layout_weight="0.5"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvLabelEmail" android:layout_marginStart="5dp"
+            android:textSize="16sp" android:text="@string/labelEmail" android:layout_marginTop="15dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/etEmail" android:layout_marginStart="5dp"
+            android:textSize="20sp" android:inputType="textEmailAddress" android:minHeight="48dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvLabelTelefono" android:layout_marginStart="5dp"
+            android:textSize="16sp" android:text="@string/labelPhone" android:layout_marginTop="15dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/etPhone" android:autofillHints="" android:layout_marginStart="5dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvLabelProvincia" android:layout_marginStart="5dp"
+            android:textSize="16sp" android:text="@string/labelProvincia" android:layout_marginTop="15dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/etProvincia" android:autofillHints="" android:layout_marginStart="5dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvLabelCiudad" android:layout_marginStart="5dp"
+            android:textSize="16sp" android:text="@string/labelCity" android:layout_marginTop="15dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/etCiudad" android:autofillHints="" android:layout_marginStart="5dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvLabelDireccion" android:layout_marginStart="5dp"
+            android:textSize="16sp" android:text="@string/labelAddress" android:layout_marginTop="15dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/etDireccion" android:autofillHints="" android:layout_marginStart="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+            android:text="@string/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:id="@+id/btnGuardar" android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        />
+    <Button
+        android:text="Cerrar sesión"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCerrar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="60dp"
+        />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              android:layout_height="match_parent" android:orientation="vertical" android:layout_margin="5dp">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/app_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/textView"
+                android:textSize="20sp" android:layout_weight="0.6" android:layout_gravity="center_vertical"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp" app:srcCompat="@drawable/tickets" android:id="@+id/ivFacturas"
+                android:layout_gravity="end" android:layout_weight="0.4"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="0.5" android:layout_marginLeft="10dp">
+            <TextView
+                    android:text="@string/nombreempresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvNombre" android:textSize="12sp"
+            />
+            <TextView
+                    android:text="@string/cif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvCif" android:textSize="12sp"
+            />
+            <TextView
+                    android:text="@string/tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvTel" android:textSize="12sp"
+            />
+            <TextView
+                    android:text="@string/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvEmail" android:textSize="12sp"
+            />
+            <TextView
+                    android:text="@string/dirf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvDireccion" android:textSize="12sp"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="0.5" android:layout_marginRight="10dp">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvfNombre" android:textSize="12sp"
+                    android:paddingStart="10dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvfEmail" android:textSize="12sp"
+                    android:paddingStart="10dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvfTelefono" android:textSize="12sp"
+                    android:paddingStart="10dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvfProvincia" android:textSize="12sp"
+                    android:paddingStart="10dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvfCiudad" android:textSize="12sp"
+                    android:paddingStart="10dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvfDireccion" android:textSize="12sp"
+                    android:layout_marginBottom="10dp" android:paddingStart="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" android:layout_marginTop="10dp">
+        <TextView
+                android:text="@string/labelComp"
+                android:layout_width="0dp"
+                android:id="@+id/tvLabelComp" android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_weight="0.50" android:textStyle="bold|italic"/>
+        <TextView
+                android:text="@string/labelSinIva"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvLabelSinIva" android:layout_weight="0.25"
+                android:textAlignment="viewEnd" android:textStyle="bold|italic"/>
+        <TextView
+                android:text="@string/labelIva"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvLabelIva" android:layout_weight="0.25"
+                android:textAlignment="viewEnd" android:textStyle="bold|italic"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp">
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:id="@+id/tvfLista" android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_weight="0.50"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvprecioCom" android:layout_weight="0.25"
+                android:textAlignment="viewEnd"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvIvaCom" android:layout_weight="0.25"
+                android:textAlignment="viewEnd"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp">
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvTotalPrecio" android:layout_weight="0.50"
+                android:textStyle="bold|italic"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvfTotal"
+                android:textAlignment="viewEnd" android:layout_marginBottom="10dp"
+                android:layout_weight="0.25"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/tvTotalIva" android:layout_weight="0.25"
+                android:textAlignment="viewEnd"/>
+    </LinearLayout>
+</LinearLayout>

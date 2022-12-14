@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:title="Seleccionar vista"
+        >
+        <menu>
+    <item
+        android:id="@+id/listview_mode"
+        android:orderInCategory="100"
+        android:title="Modo lista"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/gridview_mode"
+        android:orderInCategory="100"
+        android:title="Modo cuadricula"
+        app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/adminProductos"
+        android:orderInCategory="100"
+        android:title="Añadir producto"
+        app:showAsAction="never" />
+</menu>

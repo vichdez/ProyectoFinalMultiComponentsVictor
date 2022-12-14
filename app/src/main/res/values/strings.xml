@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">MultiComponents</string>
+    <string name="filtertitle">Filtros</string>
+    <string name="filterMause">Ratones</string>
+    <string name="filterKayboard">Teclados</string>
+    <string name="filterScreen">Monitores</string>
+    <string name="filterBase">Placas Base</string>
+    <string name="filterProcesser">Procesadores</string>
+    <string name="filterRam">Memoria Ram</string>
+    <string name="filterLaptop">Portatiles</string>
+    <string name="filterHardware">Torres</string>
+    <string name="filterCharger">Fuentes de Alimentación</string>
+
+
+    <string name="labelName">Nombres:</string>
+    <string name="labelSurname">Apellidos:</string>
+    <string name="labelEmail">Email:</string>
+    <string name="labelDatos">Datos:</string>
+    <string name="labelPhone">Teléfono:</string>
+    <string name="labelProvincia">Provincia:</string>
+    <string name="labelCity">Ciudad:</string>
+    <string name="labelAddress">Dirección:</string>
+    <string name="save">Guardar</string>
+    <string name="pass">Contraseña:</string>
+
+    <string name="home">Home</string>
+    <string name="carrito">Carrito</string>
+    <string name="facturas">Facturas</string>
+    <string name="usuarioconfig">Configuración de Usuario</string>
+
+    <string name="nombreempresa">Multicomponents.SL</string>
+    <string name="cif">V41844986</string>
+    <string name="tel">975778539</string>
+    <string name="email">multicomponents.sl@gmail.com</string>
+    <string name="dirf">C/ Gustavo Adolfo Bécquer n123</string>
+
+    <string name="labelComp">Componente</string>
+    <string name="labelSinIva">Sin Iva</string>
+    <string name="labelIva">Iva:21%</string>
+
+    <string name="forgot">¿Olvidé mi contraseña?</string>
+    <string name="log_in">Iniciar Sesión</string>
+    <string name="another_log">Otro incio de sesión:</string>
+    <string name="register">Registrarse</string>
+    <string name="npass">Nueva Contraseña</string>
+    <string name="rpass">Repetir Contraseña</string>
+
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.proyectofinalmulticomponents.MainActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/carritoCompra"
+        android:name="com.example.proyectofinalmulticomponents.CarritoCompra"
+        android:label="activity_carrito_compra"
+        tools:layout="@layout/activity_carrito_compra" />
+    <activity
+        android:id="@+id/favoritos"
+        android:name="com.example.proyectofinalmulticomponents.Favoritos"
+        android:label="activity_favoritos"
+        tools:layout="@layout/activity_favoritos" />
+    <activity
+        android:id="@+id/facturas"
+        android:name="com.example.proyectofinalmulticomponents.Facturas"
+        android:label="activity_facturas"
+        tools:layout="@layout/activity_facturas" />
+    <activity
+        android:id="@+id/userConfig"
+        android:name="com.example.proyectofinalmulticomponents.UserConfig"
+        android:label="activity_user_config"
+        tools:layout="@layout/activity_user_config" />
+    <activity
+        android:id="@+id/acercaDe"
+        android:name="com.example.proyectofinalmulticomponents.AcercaDe"
+        android:label="activity_acerca_de"
+        tools:layout="@layout/activity_acerca_de" />
+    <activity
+        android:id="@+id/login"
+        android:name="com.example.proyectofinalmulticomponents.login.Login"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/politicaDePrivacidad"
+        android:name="com.example.proyectofinalmulticomponents.PoliticaDePrivacidad"
+        android:label="activity_politica_de_privacidad"
+        tools:layout="@layout/activity_politica_de_privacidad" />
+</navigation>

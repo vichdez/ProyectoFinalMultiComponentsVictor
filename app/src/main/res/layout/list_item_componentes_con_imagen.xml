@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivComponente"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_marginRight="20dp"
+        />
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#8AA2C6"/>
+    <LinearLayout
+            android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:text="TextView"
+            android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:id="@+id/tvNomComponente"
+            android:textSize="15sp"
+            />
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="TextView"
+                android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                android:textSize="12sp"
+                android:id="@+id/tvDescComponente"
+                    android:layout_weight="0.7"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                android:layout_weight="0.3" android:gravity="right">
+               <TextView
+                        android:text="TextView"
+                   android:fontFamily="sans-serif-condensed"
+                    android:textSize="21sp"
+                    android:textColor="#1956b4"
+                   android:textStyle="bold"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                    android:id="@+id/tvPreComponente"
+                        android:layout_weight="0.3"
+                    android:padding="2dp"
+                    />
+                <CheckBox
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/cbItemFavoritos" android:layout_weight="0.7"
+                    android:gravity="center" android:focusableInTouchMode="false" android:focusable="false"
+                    android:button="@drawable/corazon_relleno"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

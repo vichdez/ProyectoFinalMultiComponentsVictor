@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/drawable/carrito.xml" value="0.1645" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/drawable/corazon.xml" value="0.1645" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/drawable/corazon_relleno.xml" value="0.294" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/drawable/home.xml" value="0.1645" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/drawable/pagar.xml" value="0.208" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/drawable/tickets.xml" value="0.1645" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/drawable/usuarioconfig.xml" value="0.1645" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/activity_carrito_compra.xml" value="0.22" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/activity_facturas.xml" value="0.33" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/activity_olvide_contrasenia.xml" value="0.22" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/activity_user_config.xml" value="0.33" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/app_bar_buttons.xml" value="0.15307971014492755" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/list_item_componentes.xml" value="0.3625" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/layout/list_item_facturas.xml" value="0.22" />
+        <entry key="..\:/Users/andre/IntelliJIDEAProjects/ProyectoFinalMultiComponents/app/src/main/res/menu/app_bar_menu.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

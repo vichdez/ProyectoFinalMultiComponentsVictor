@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#A5B8D6"
+    tools:context=".AcercaDe">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="?attr/colorPrimary">
+    <ImageButton
+        android:id="@+id/imgBtnNavigator"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerInside"
+        android:background="?attr/colorPrimary"
+        android:onClick="abrirNavigation"
+        android:src="@drawable/back" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acerca de Nosotros"
+        android:fontFamily="cursive"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8AA2C6"/>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Somos Víctor Hernández, \nAndrea Cianchi y David Rodríguez"
+        android:textSize="21dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="35dp"
+        android:orientation="vertical"
+        android:textColor="#393737"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Somos unos jóvenes desarrolladores de aplicaciones multiplataforma. Esperemos que esta aplicación cumpla con sus expectativas y la disfruten.\n\nCualquier sugerencia la puede mandar a mi correo personal victorhernandezugaz@gmail.com \n \n Muchas gracias. \n-Víctor."
+        android:textSize="15dp"
+        android:layout_margin="30dp"
+        android:gravity="left"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>

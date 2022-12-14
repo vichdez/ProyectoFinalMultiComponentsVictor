@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/personal">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home"
+            />
+        <item
+            android:id="@+id/nav_favoritos"
+            android:icon="@drawable/favoritos"
+            android:title="@string/menu_fav"
+            />
+        <item
+            android:id="@+id/nav_carritoCompra"
+            android:icon="@drawable/carrito"
+            android:title="@string/menu_carrito"/>
+        <item
+            android:id="@+id/nav_facturas"
+            android:icon="@drawable/tickets"
+            android:title="@string/menu_facturas"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/configuration">
+        <item
+            android:id="@+id/nav_userConfig"
+            android:icon="@drawable/usuarioconfig"
+            android:title="@string/menu_userconf"/>
+        <item
+            android:id="@+id/nav_acercaDe"
+            android:icon="@drawable/personas"
+            android:title="@string/menu_about_us"/>
+
+        <item
+            android:id="@+id/nav_politicaDePrivacidad"
+            android:icon="@drawable/politica"
+            android:title="@string/politicapriv"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/exit">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/cerrar"
+            android:title="@string/menu_logout"/>
+    </group>
+</menu>

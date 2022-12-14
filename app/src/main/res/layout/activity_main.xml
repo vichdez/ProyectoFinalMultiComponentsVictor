@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:orientation="vertical">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/cbFavoritos"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                android:cursorVisible="false"
+                android:button="@drawable/corazon_relleno"
+                android:checked="false"/>
+        <Switch
+                android:text="Filtros"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/sFiltros" android:textAlignment="center"
+                android:checked="false" android:showText="false"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/llFiltros">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" android:layout_weight="1">
+            <CheckBox
+                    android:text="@string/filterMause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbRatones"
+                    app:centerIfNoTextEnabled="false" android:onClick="checked"/>
+            <CheckBox
+                    android:text="@string/filterKayboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbTeclados" android:onClick="checked"/>
+            <CheckBox
+                    android:text="@string/filterScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbMonitores" android:onClick="checked"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" android:layout_weight="1">
+            <CheckBox
+                    android:text="@string/filterProcesser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbProcesadores" android:onClick="checked"/>
+            <CheckBox
+                    android:text="@string/filterBase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbPlacasBase" android:onClick="checked"/>
+            <CheckBox
+                    android:text="@string/filterRam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbRam" android:onClick="checked"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp" android:layout_weight="1"
+                android:orientation="vertical">
+            <CheckBox
+                    android:text="@string/filterLaptop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbPortatiles" android:onClick="checked"/>
+            <CheckBox
+                    android:text="@string/filterHardware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbTorres" android:onClick="checked"/>
+            <CheckBox
+                    android:text="@string/filterCharger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/chbFAliment" android:onClick="checked"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/lyComponentesHome"/>
+</LinearLayout>
