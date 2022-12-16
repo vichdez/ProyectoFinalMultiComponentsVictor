@@ -15,11 +15,7 @@
         android:name="com.example.proyectofinalmulticomponents.CarritoCompra"
         android:label="activity_carrito_compra"
         tools:layout="@layout/activity_carrito_compra" />
-    <activity
-        android:id="@+id/favoritos"
-        android:name="com.example.proyectofinalmulticomponents.Favoritos"
-        android:label="activity_favoritos"
-        tools:layout="@layout/activity_favoritos" />
+
     <activity
         android:id="@+id/facturas"
         android:name="com.example.proyectofinalmulticomponents.Facturas"

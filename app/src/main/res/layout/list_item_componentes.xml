@@ -13,8 +13,11 @@
             android:layout_height="match_parent">
         <TextView
                 android:text="TextView"
+            android:textColor="@color/black"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/tvNomComponente" android:textSize="16sp"
+                android:layout_height="wrap_content"
+            android:id="@+id/tvNomComponente"
+            android:textSize="22sp"
                 android:textStyle="bold"/>
         <LinearLayout
                 android:orientation="horizontal"
@@ -22,24 +25,33 @@
                 android:layout_height="match_parent">
             <TextView
                     android:text="TextView"
+                android:textColor="@color/black"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent" android:id="@+id/tvDescComponente"
+                    android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:id="@+id/tvDescComponente"
                     android:layout_weight="0.7"/>
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent" android:layout_weight="0.3" android:gravity="right">
+                    android:layout_height="match_parent"
+                android:layout_weight="0.3" android:gravity="right">
                 <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp" android:id="@+id/cbItemFavoritos" android:layout_weight="0.7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                    android:id="@+id/cbItemFavoritos" android:layout_weight="0.7"
                         android:gravity="right" android:focusableInTouchMode="false" android:focusable="false"
                         android:button="@drawable/corazon_relleno"/>
                 <TextView
                         android:text="TextView"
+                    android:textSize="20sp"
+                    android:textColor="#1956b4"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp" android:id="@+id/tvPreComponente"
+                        android:layout_height="wrap_content"
+                    android:id="@+id/tvPreComponente"
                         android:layout_weight="0.3"
-                        android:layout_gravity="bottom" android:textAlignment="viewEnd" android:gravity="end"/>
+                    android:padding="2dp"
+                    />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

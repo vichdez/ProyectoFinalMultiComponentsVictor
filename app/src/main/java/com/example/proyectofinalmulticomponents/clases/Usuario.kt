@@ -2,7 +2,8 @@ package com.example.proyectofinalmulticomponents.clases
 
 import android.widget.EditText
 
-class Usuario (nombre:String , apellidos:String, email:String, password:String, telefono:Int, provincia:String, ciudad:String, direccion:String){
+class Usuario (nombre:String , apellidos:String, email:String, password:String, telefono:Int,
+               provincia:String, ciudad:String, direccion:String){
     var nombre:String = nombre
     var apellidos:String = apellidos
     var email:String = email

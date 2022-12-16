@@ -13,6 +13,11 @@ class ComponenteConImagen (nombre:String, desc:String, precio:Double,img:String)
     var type:String = ""
     var unidades:Int = 0
     var imagen:String = img
+    var unidadesCliente: Int = 1
+
+    fun actualizar(uc:Int){
+        unidadesCliente = uc
+    }
 
     fun aniadirTag(s:String){
         type = s

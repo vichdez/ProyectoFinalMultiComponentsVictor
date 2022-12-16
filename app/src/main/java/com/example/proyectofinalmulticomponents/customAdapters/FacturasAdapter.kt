@@ -10,10 +10,15 @@ import android.widget.TextView
 import com.example.proyectofinalmulticomponents.clases.Factura
 import com.example.proyectofinalmulticomponents.R
 import com.example.proyectofinalmulticomponents.clases.Componente
+import com.example.proyectofinalmulticomponents.clases.ComponenteConImagen
+import java.text.NumberFormat
+import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.math.roundToInt
 
 class FacturasAdapter(var context: Context, var array: ArrayList<Factura>): BaseAdapter(){
     lateinit var ivLog: ImageView
+    lateinit var tvFech: TextView
     lateinit var tvNom: TextView
     lateinit var tvEma: TextView
     lateinit var tvTel:TextView
@@ -21,11 +26,12 @@ class FacturasAdapter(var context: Context, var array: ArrayList<Factura>): Base
     lateinit var tvCiu:TextView
     lateinit var tvDir:TextView
     lateinit var tvLista:TextView
-    lateinit var tvPrecio: TextView
-    lateinit var tvIva:TextView
-    lateinit var tvTotalIva:TextView
-    lateinit var tvPrecioCom:TextView
-    lateinit var tvTotal:TextView
+    lateinit var tvPrecio:TextView
+    lateinit var tvSubTotalPrecio:TextView
+    lateinit var tvIvaPrecio:TextView
+    lateinit var tvTotalTotal:TextView
+    lateinit var tvTotalPrecio:TextView
+    lateinit var tvUnidad: TextView
 
     override fun getCount(): Int {
         return array.count()
@@ -44,8 +50,9 @@ class FacturasAdapter(var context: Context, var array: ArrayList<Factura>): Base
         var view = convertView
         view = LayoutInflater.from(context).inflate(R.layout.list_item_facturas, null)
 
-        ivLog = view.findViewById(R.id.ivFacturas)
-        ivLog.setImageResource(R.drawable.tickets)
+
+        tvFech = view.findViewById(R.id.tvFecha)
+        tvFech.text = "${array[position].fecha}"
 
         tvNom = view.findViewById(R.id.tvfNombre)
         tvNom.text = "${array[position].user.nombre} ${array[position].user.apellidos}"
@@ -67,46 +74,47 @@ class FacturasAdapter(var context: Context, var array: ArrayList<Factura>): Base
 
         tvLista = view.findViewById(R.id.tvfLista)
 
-        tvPrecioCom = view.findViewById(R.id.tvprecioCom)
+        tvPrecio = view.findViewById(R.id.tvPrecio)
 
-        tvIva = view.findViewById(R.id.tvIvaCom)
+        tvUnidad = view.findViewById(R.id.tvUnidad)
 
-        var iIva=0.0
-        var s =""
-        var sinIva=""
-        var sinIvaT=0.0
-        var soloIva=""
+        tvSubTotalPrecio = view.findViewById(R.id.tvSubTotalPrecio)
+
+        tvIvaPrecio = view.findViewById(R.id.tvIvaPrecio)
+
+        var list =""
+        var price =""
+        var uni = ""
         var fac: Factura = array[position]
+        list =""
+        for (com: ComponenteConImagen in fac.lista) {
+            list+="${com.nombre}\n"
+            uni+= "${com.unidadesCliente}\n"
+            price+="${numeroEUR(com.precio*com.unidadesCliente)}€\n"
+        }
+        tvLista.text=list
+        tvPrecio.text=price
+        tvUnidad.text=uni
 
-            iIva=0.0
-            s =""
-            sinIva=""
-            soloIva=""
-            for (com: Componente in fac.lista) {
-                var iva = com.precio*21/100
 
-                s+="${com.nombre}\n"
-                iIva+= iva
-                sinIva +="${redondeo(com.precio-iva)}€\n"
-                soloIva += "${redondeo(iva)}€\n"
-                sinIvaT +=redondeo(com.precio-iva)
-            }
-            tvLista.text=s
-            tvPrecioCom.text = sinIva
-            tvIva.text = soloIva
+        var total=redondeo(array[position].precio)
+        tvTotalTotal = view.findViewById(R.id.tvTotalTotal)
+        tvTotalTotal.text= "${numeroEUR(total)}€"
 
-            tvPrecio = view.findViewById(R.id.tvfTotal)
-            tvPrecio.text = "$sinIvaT€"
+        tvSubTotalPrecio.text= "${numeroEUR(redondeo(total/1.21))}€"
 
-            tvTotalIva = view.findViewById(R.id.tvTotalIva)
-            tvTotalIva.text = "${redondeo(iIva)}€"
-
-            tvTotal = view.findViewById(R.id.tvTotalPrecio)
-            tvTotal.text="Total precio final: ${array[position].precio}€"
+        var iva=redondeo(total-(total/1.21))
+        tvIvaPrecio.text= "${numeroEUR(iva)}€"
         return view
     }
 
     fun redondeo(num: Double): Double {
-        return (num * 100.0).roundToInt() / 100.0
+        return (num * 100.00).roundToInt() / 100.00
+    }
+
+    fun numeroEUR(num: Double): String {
+        val nf = NumberFormat.getInstance(Locale.GERMAN)
+        var string = nf.format(num)
+        return string
     }
 }

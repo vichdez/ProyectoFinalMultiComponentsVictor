@@ -14,10 +14,20 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         tools:srcCompat="@tools:sample/avatars"
-        android:layout_marginRight="20dp"
         />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:text="4"
+        android:id="@+id/tvUnitClients"
+        android:textColor="#3A404A"
+        android:textStyle="bold"
+        android:layout_marginRight="12dp"/>
     <View
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginBottom="10dp"
         android:layout_width="1dp"
         android:layout_height="match_parent"
@@ -43,10 +53,11 @@
                     android:text="TextView"
                 android:textColor="@color/black"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                 android:textSize="12sp"
                 android:id="@+id/tvDescComponente"
                     android:layout_weight="0.7"/>
+
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"

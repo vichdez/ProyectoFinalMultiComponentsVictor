@@ -1,154 +1,378 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-              android:layout_height="match_parent" android:orientation="vertical" android:layout_margin="5dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="15dp"
+    android:background="#FFFFFF">
 
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:text="@string/app_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/textView"
-                android:textSize="20sp" android:layout_weight="0.6" android:layout_gravity="center_vertical"/>
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <ImageView
-                android:layout_width="0dp"
-                android:layout_height="100dp" app:srcCompat="@drawable/tickets" android:id="@+id/ivFacturas"
-                android:layout_gravity="end" android:layout_weight="0.4"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/ivFacturas"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/multienblancoynegro" />
+
         <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:layout_weight="0.5" android:layout_marginLeft="10dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
             <TextView
-                    android:text="@string/nombreempresa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvNombre" android:textSize="12sp"
-            />
+                android:id="@+id/tvFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="7sp" />
+
             <TextView
-                    android:text="@string/cif"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvCif" android:textSize="12sp"
-            />
+                android:id="@+id/tvNombre"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombreempresa"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
             <TextView
-                    android:text="@string/tel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvTel" android:textSize="12sp"
-            />
+                android:id="@+id/tvCif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cif"
+                android:textColor="@color/black"
+                android:textSize="7sp" />
+
             <TextView
-                    android:text="@string/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvEmail" android:textSize="12sp"
-            />
+                android:id="@+id/tvTel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tel"
+                android:textColor="@color/black"
+                android:textSize="7sp" />
+
             <TextView
-                    android:text="@string/dirf"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvDireccion" android:textSize="12sp"
-            />
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="multicomponents.sl@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="7sp" />
+
+            <TextView
+                android:id="@+id/tvDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dirf"
+                android:textColor="@color/black"
+                android:textSize="7sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+            android:background="#C3C3C3"/>
+
+    <TextView
+        android:text="FACTURA SIMPLIFICADA"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tvFacturaSimp" android:textSize="10sp"
+        android:paddingStart="10dp" android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" >
+            <TextView
+                android:text="Nombre:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="7sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
+            <TextView
+                android:text="Email:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="7sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
+            <TextView
+                android:text="Telefono:"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="7sp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
+            <TextView
+                android:text="Provincia:"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="7sp"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:text="Ciudad:"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="7sp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
+            <TextView
+                android:text="Dirección:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="7sp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
         </LinearLayout>
         <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:layout_weight="0.5" android:layout_marginRight="10dp">
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="0.5" android:layout_marginRight="10dp">
             <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvfNombre" android:textSize="12sp"
-                    android:paddingStart="10dp"/>
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvfNombre"
+                android:textSize="7sp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
             <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvfEmail" android:textSize="12sp"
-                    android:paddingStart="10dp"/>
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvfEmail"
+                android:textSize="7sp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
             <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvfTelefono" android:textSize="12sp"
-                    android:paddingStart="10dp"/>
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvfTelefono"
+                android:textSize="7sp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
             <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvfProvincia" android:textSize="12sp"
-                    android:paddingStart="10dp"/>
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvfProvincia"
+                android:textSize="7sp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
             <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvfCiudad" android:textSize="12sp"
-                    android:paddingStart="10dp"/>
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvfCiudad"
+                android:textSize="7sp"
+                android:paddingStart="10dp" android:textColor="@color/black"/>
             <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tvfDireccion" android:textSize="12sp"
-                    android:layout_marginBottom="10dp" android:paddingStart="10dp"/>
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvfDireccion"
+                android:textSize="7sp"
+                android:layout_marginBottom="10dp" android:paddingStart="10dp" android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp" android:layout_marginTop="10dp">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" android:layout_marginTop="10dp">
         <TextView
-                android:text="@string/labelComp"
-                android:layout_width="0dp"
-                android:id="@+id/tvLabelComp" android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_weight="0.50" android:textStyle="bold|italic"/>
+            android:text="Artículo"
+            android:textSize="7sp"
+            android:background="#C3C3C3"
+            android:id="@+id/tvLabelComp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7" android:textStyle="bold|italic" android:textColor="@color/black"/>
+
         <TextView
-                android:text="@string/labelSinIva"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/tvLabelSinIva" android:layout_weight="0.25"
-                android:textAlignment="viewEnd" android:textStyle="bold|italic"/>
+            android:id="@+id/tvLabelUnidades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#C3C3C3"
+            android:text="Unidades"
+            android:layout_weight="0.1"
+            android:textColor="@color/black"
+            android:textSize="7sp"
+            android:textStyle="bold|italic" />
+
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            />
         <TextView
-                android:text="@string/labelIva"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/tvLabelIva" android:layout_weight="0.25"
-                android:textAlignment="viewEnd" android:textStyle="bold|italic"/>
+            android:textSize="7sp"
+            android:text="Precio"
+            android:background="#C3C3C3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLabelIva"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:paddingRight="5dp"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            ></LinearLayout>
+        <TextView
+            android:text="TextView"
+            android:textSize="7sp"
+            android:layout_width="0dp"
+            android:id="@+id/tvfLista"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="0.7" android:textColor="@color/black"/>
+        <TextView
+            android:text="TextView"
+            android:textSize="7sp"
+            android:layout_width="0dp"
+            android:id="@+id/tvUnidad"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_weight="0.2" android:textColor="@color/black"/>
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            />
+        <TextView
+            android:text="TextView"
+            android:textSize="7sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPrecio"
+            android:layout_weight="0.2"
+            android:textAlignment="viewEnd" android:textColor="@color/black"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+        >
+        <TextView
+            android:text="Subtotal sin IVA"
+            android:textSize="7sp"
+            android:background="#C3C3C3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/tvSubTotal" android:layout_weight="0.9"
+            android:textStyle="bold|italic" android:textColor="@color/black" android:textAlignment="viewEnd"
+            android:paddingRight="10dp"/>
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            />
+        <TextView
+            android:text="TextView"
+            android:textSize="7sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/tvSubTotalPrecio" android:layout_weight="0.2"
+            android:textAlignment="viewEnd" android:textColor="@color/black"/>
     </LinearLayout>
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+        >
         <TextView
-                android:text="TextView"
-                android:layout_width="0dp"
-                android:id="@+id/tvfLista" android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_weight="0.50"/>
+            android:text="@string/labelIva"
+            android:textSize="7sp"
+            android:background="#C3C3C3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/tvIva" android:layout_weight="0.9"
+            android:textStyle="bold|italic" android:textColor="@color/black" android:textAlignment="viewEnd"
+            android:paddingRight="10dp"/>
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            />
         <TextView
-                android:text="TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/tvprecioCom" android:layout_weight="0.25"
-                android:textAlignment="viewEnd"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/tvIvaCom" android:layout_weight="0.25"
-                android:textAlignment="viewEnd"/>
+            android:text="TextView"
+            android:textSize="7sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvIvaPrecio" android:layout_weight="0.2"
+            android:textAlignment="viewEnd" android:textColor="@color/black"/>
     </LinearLayout>
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+        android:layout_marginBottom="30dp">
         <TextView
-                android:text="TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/tvTotalPrecio" android:layout_weight="0.50"
-                android:textStyle="bold|italic"/>
+            android:text="Total"
+            android:textSize="7sp"
+            android:background="#C3C3C3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:textStyle="bold|italic" android:textColor="@color/black" android:textAlignment="viewEnd"
+            android:paddingRight="10dp"/>
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            />
         <TextView
-                android:text="TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/tvfTotal"
-                android:textAlignment="viewEnd" android:layout_marginBottom="10dp"
-                android:layout_weight="0.25"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/tvTotalIva" android:layout_weight="0.25"
-                android:textAlignment="viewEnd"/>
+            android:textSize="7sp"
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/tvTotalTotal" android:layout_weight="0.2"
+            android:textAlignment="viewEnd" android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>

@@ -11,11 +11,6 @@
             android:title="@string/menu_home"
             />
         <item
-            android:id="@+id/nav_favoritos"
-            android:icon="@drawable/favoritos"
-            android:title="@string/menu_fav"
-            />
-        <item
             android:id="@+id/nav_carritoCompra"
             android:icon="@drawable/carrito"
             android:title="@string/menu_carrito"/>
@@ -23,13 +18,13 @@
             android:id="@+id/nav_facturas"
             android:icon="@drawable/tickets"
             android:title="@string/menu_facturas"/>
-    </group>
-    <group android:checkableBehavior="single"
-        android:id="@+id/configuration">
         <item
             android:id="@+id/nav_userConfig"
             android:icon="@drawable/usuarioconfig"
             android:title="@string/menu_userconf"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/texto">
         <item
             android:id="@+id/nav_acercaDe"
             android:icon="@drawable/personas"

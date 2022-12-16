@@ -9,8 +9,9 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyectofinalmulticomponents.clases.ComponenteConImagen
 import com.example.proyectofinalmulticomponents.databinding.ActivityAdminProductosBinding
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.example.proyectofinalmulticomponents.login.Login
+import com.example.proyectofinalmulticomponents.login.OlvideContrasenia
+import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
@@ -30,6 +31,11 @@ class AdminProductos : AppCompatActivity() {
     private var imageUri: Uri? = null
     private var storageref: StorageReference? = null
 
+    //main
+    private lateinit var fstorage: FirebaseStorage
+    private lateinit var databasecomponents: DatabaseReference
+    private lateinit var firebaseDatabase: FirebaseDatabase
+
     companion object{
         lateinit var c1: ComponenteConImagen
         lateinit var nombreSring: String
@@ -40,6 +46,10 @@ class AdminProductos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityAdminProductosBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+
+
+        if(supportActionBar !=null)
+            this.supportActionBar?.hide();
 
         //Definiendo las variables
         insertarProducto = findViewById(R.id.btnTerminar)
@@ -190,6 +200,10 @@ class AdminProductos : AppCompatActivity() {
                         descripProd.text.clear()
                         precioProd.text.clear()
 
+                        //Actualizar la tienda
+                        MainActivity.componentesArrayList.clear()
+                        componentesBBDD()
+
                     }.addOnFailureListener {
                         Toast.makeText(
                             applicationContext,
@@ -224,9 +238,101 @@ class AdminProductos : AppCompatActivity() {
     }
 
     fun abrirNavigation(view: View){
-        var i: Intent = Intent(this, NavigationDrawerActivity::class.java)
+        var i: Intent = Intent(this, MainActivity::class.java)
         startActivity(i)
     }
+
+
+
+
+    fun componentesBBDD() {
+        //Cosa del main
+
+        fstorage = FirebaseStorage.getInstance()
+        storageref = fstorage.reference
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        database = firebaseDatabase.getReference("Usuarios")
+        databasecomponents = firebaseDatabase.getReference("Componentes")
+
+        if (MainActivity.componentesArrayList.isEmpty()) {
+
+
+            lateinit var c: ComponenteConImagen
+            //Agarrar la base de datos de componentes
+            databasecomponents.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                    if (dataSnapshot.exists()) {
+//FETCH ALL POSSIBLE OBJECTS COMPONENTS FROM FIREBASE
+                        for (singleSnapshot in dataSnapshot.children) {
+                            //Por cada branch, un componente
+                            val cnombre = singleSnapshot.child("nombre").getValue().toString()
+                            val cdescripcion =
+                                singleSnapshot.child("descripcion").getValue().toString()
+                            val cprecio = singleSnapshot.child("precio").getValue().toString()
+                            val ctype = singleSnapshot.child("type").getValue().toString()
+                            val cunidades =
+                                singleSnapshot.child("unidades").getValue().toString()
+
+                            //La imagen se busca en el Storage, sabiendo ya el nombre lo tenemos identificado
+                            val cimagen =
+                                storageref!!.child("Componentes/" + cnombre + ".png").downloadUrl
+
+                            if ((cunidades.toInt()-1) > 0) {
+                                //lateinit var uri: String
+                                cimagen.addOnSuccessListener { uri ->
+
+
+                                    //2.
+                                    c = ComponenteConImagen(
+                                        cnombre,
+                                        cdescripcion,
+                                        cprecio.toDouble(),
+                                        uri.toString()
+                                    )
+
+                                    c.type = ctype
+                                    c.unidades = cunidades.toInt()
+
+                                    //3. add
+                                    //Para el arrayList
+                                    MainActivity.componentesArrayList.add(c)
+                                    // Log.e(TAG, c.nombre + "!" + c.precio + "!" + c.descripcion + "!" + c.imagen)
+                                    //Log.e(ContentValues.TAG, MainActivity.componentesArrayList[pos].toString())
+                                }
+                            } else {
+                                //No se crea objeto
+                            }
+                        }
+
+
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            "Hubo un error en el listado de productos",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(
+                        this@AdminProductos,
+                        "No se pudieron recuperar los datos",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            })
+
+
+        } else {
+        }
+    }
+
+
+
 
 }
 

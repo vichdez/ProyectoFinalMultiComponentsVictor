@@ -7,7 +7,50 @@
         android:layout_height="match_parent"
         tools:context=".Facturas" android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="?attr/colorPrimary">
+        <ImageButton
+            android:id="@+id/imgBtnNavigator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerInside"
+            android:background="?attr/colorPrimary"
+            android:onClick="abrirNavigation"
+            android:src="@drawable/back" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tickets"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:text="Tus facturas"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
     <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/lyFacturas"/>
+            android:layout_height="match_parent"
+        android:id="@+id/lyFacturas"/>
 </LinearLayout>

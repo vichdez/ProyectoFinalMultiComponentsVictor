@@ -5,12 +5,52 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".UserConfig" android:orientation="vertical">
+    android:background="#6798BF"
+        tools:context=".UserConfig"
+    android:orientation="vertical">
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/tvLabelDatos" android:layout_marginStart="5dp"
-            android:textSize="16sp" android:text="@string/labelDatos" android:layout_marginTop="15dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="?attr/colorPrimary">
+        <ImageButton
+            android:id="@+id/imgBtnNavigator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerInside"
+            android:background="?attr/colorPrimary"
+            android:onClick="abrirNavigation"
+            android:src="@drawable/back" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/usuarioconfig"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:text="Tus datos"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -18,11 +58,13 @@
         <TextView
                 android:text="@string/labelName"
                 android:layout_width="0dp"
+            android:textColor="@color/white"
                 android:layout_height="wrap_content" android:id="@+id/tvLabelNombre"
                 android:textSize="16sp" android:layout_weight="0.5"/>
         <TextView
                 android:text="@string/labelSurname"
                 android:layout_width="0dp"
+            android:textColor="@color/white"
                 android:layout_height="wrap_content" android:id="@+id/tvLabelApellido"
                 android:textSize="16sp" android:layout_weight="0.5"/>
     </LinearLayout>
@@ -32,15 +74,26 @@
             android:layout_height="wrap_content">
         <EditText
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/etNombre" android:layout_marginStart="5dp"
-                android:textSize="20sp" android:inputType="textPersonName|text" android:layout_weight="0.5"/>
+                android:layout_height="wrap_content"
+            android:id="@+id/etNombre"
+            android:layout_marginStart="5dp"
+                android:textSize="20sp"
+            android:inputType="textPersonName|text"
+            android:digits=" áéíóúabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+            android:layout_weight="0.5"/>
         <EditText
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/etApellido" android:layout_marginStart="5dp"
-                android:textSize="20sp" android:inputType="textPersonName|text" android:layout_weight="0.5"/>
+                android:layout_height="wrap_content"
+            android:id="@+id/etApellido"
+            android:layout_marginStart="5dp"
+                android:textSize="20sp"
+            android:inputType="textPersonName|text"
+            android:digits=" áéíóúabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" android:layout_weight="0.5"/>
     </LinearLayout>
     <TextView
             android:layout_width="match_parent"
+        android:textColor="@color/white"
             android:layout_height="wrap_content" android:id="@+id/tvLabelEmail" android:layout_marginStart="5dp"
             android:textSize="16sp" android:text="@string/labelEmail" android:layout_marginTop="15dp"/>
     <EditText
@@ -49,6 +102,7 @@
             android:textSize="20sp" android:inputType="textEmailAddress" android:minHeight="48dp"/>
     <TextView
             android:layout_width="match_parent"
+        android:textColor="@color/white"
             android:layout_height="wrap_content" android:id="@+id/tvLabelTelefono" android:layout_marginStart="5dp"
             android:textSize="16sp" android:text="@string/labelPhone" android:layout_marginTop="15dp"/>
     <EditText
@@ -56,9 +110,11 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/etPhone" android:autofillHints="" android:layout_marginStart="5dp"/>
+            android:id="@+id/etPhone" android:autofillHints=""
+        android:layout_marginStart="5dp"/>
     <TextView
             android:layout_width="match_parent"
+        android:textColor="@color/white"
             android:layout_height="wrap_content" android:id="@+id/tvLabelProvincia" android:layout_marginStart="5dp"
             android:textSize="16sp" android:text="@string/labelProvincia" android:layout_marginTop="15dp"/>
     <EditText
@@ -66,9 +122,11 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:ems="10"
+        android:digits=" áéíóúabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:id="@+id/etProvincia" android:autofillHints="" android:layout_marginStart="5dp"/>
     <TextView
             android:layout_width="match_parent"
+        android:textColor="@color/white"
             android:layout_height="wrap_content" android:id="@+id/tvLabelCiudad" android:layout_marginStart="5dp"
             android:textSize="16sp" android:text="@string/labelCity" android:layout_marginTop="15dp"/>
     <EditText
@@ -76,36 +134,32 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:ems="10"
+        android:digits=" áéíóúabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:id="@+id/etCiudad" android:autofillHints="" android:layout_marginStart="5dp"/>
     <TextView
             android:layout_width="match_parent"
+        android:textColor="@color/white"
             android:layout_height="wrap_content" android:id="@+id/tvLabelDireccion" android:layout_marginStart="5dp"
             android:textSize="16sp" android:text="@string/labelAddress" android:layout_marginTop="15dp"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textMultiLine"
+        android:lines="2"
             android:ems="10"
             android:id="@+id/etDireccion" android:autofillHints="" android:layout_marginStart="5dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
 
     <Button
             android:text="@string/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimaryVariant"
         android:id="@+id/btnGuardar" android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
         />
-    <Button
-        android:text="Cerrar sesión"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnCerrar"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        />
-    </LinearLayout>
+
 </LinearLayout>

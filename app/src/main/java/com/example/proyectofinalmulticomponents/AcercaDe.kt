@@ -9,10 +9,13 @@ class AcercaDe : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acerca_de)
+
+        if(supportActionBar !=null)
+            this.supportActionBar?.hide();
     }
 
     fun abrirNavigation(view: View){
-        var i: Intent = Intent(this, NavigationDrawerActivity::class.java)
+        var i: Intent = Intent(this, MainActivity::class.java)
         startActivity(i)
     }
 }

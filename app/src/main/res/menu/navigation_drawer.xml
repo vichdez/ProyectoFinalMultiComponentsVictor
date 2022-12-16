@@ -9,18 +9,32 @@
     <item
         android:id="@+id/listview_mode"
         android:orderInCategory="100"
-        android:title="Modo lista"
+        android:title="Productos"
         app:showAsAction="never" />
     <item
         android:id="@+id/gridview_mode"
         android:orderInCategory="100"
-        android:title="Modo cuadricula"
+        android:title="Imágenes"
         app:showAsAction="never" />
+        </menu>
+    </item>
+    <item
+        android:title="Ordenar por precio"
+        >
+        <menu>
+            <item
+                android:id="@+id/ordenDesc"
+                android:title="De mayor a menor"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/ordenAsc"
+                android:title="De menor a mayor"
+                app:showAsAction="never" />
         </menu>
     </item>
 
     <item
-        android:id="@+id/adminProductos"
+        android:id="@+id/admin"
         android:orderInCategory="100"
         android:title="Añadir producto"
         app:showAsAction="never" />
